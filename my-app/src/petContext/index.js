@@ -27,6 +27,13 @@ function PetContext({ children }) {
 
     }
 
+    const deletePet = (owner) => {
+        const newList = [...listPets]
+        const petIndex = newList.findIndex(pet => pet.owner === owner)
+
+        newList.splice(petIndex, 1)
+        setListPets(newList)
+    }
 
     return (
         <myContext.Provider value={
@@ -52,6 +59,7 @@ function PetContext({ children }) {
                 updatePet,
                 updateContent,
                 setUpdateContent,
+                deletePet,
             }
         }>
             {children}

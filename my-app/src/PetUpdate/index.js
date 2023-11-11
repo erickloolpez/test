@@ -12,8 +12,7 @@ function PetUpdate() {
         setDogAge,
         setDogOwner,
         listPets,
-        setListPets,
-        updateContent
+        updateContent,
     } = React.useContext(myContext)
 
     return (

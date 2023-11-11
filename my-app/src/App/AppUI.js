@@ -4,6 +4,7 @@ import { PetInfo } from '../PetInfo/index'
 import { myContext } from '../petContext'
 import {PetRead} from '../PetRead/index'
 import {PetUpdate} from '../PetUpdate/index'
+import {PetDelete} from '../PetDelete/index'
 
 function AppUI() {
     const { create, read, update, del} = React.useContext(myContext)
@@ -20,7 +21,7 @@ function AppUI() {
                 <PetUpdate />
             )}
             {del && (
-                <PetInfo />
+                <PetDelete />
             )}
         </>
     )
