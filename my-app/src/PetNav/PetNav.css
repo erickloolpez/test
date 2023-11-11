@@ -4,7 +4,11 @@
     align-items: center;
 }
 
-.navbar p{
-    color: #232D57;
-    cursor: pointer;
+.navbar button{
+    background-color: #5361FE;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+
 }

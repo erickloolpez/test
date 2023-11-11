@@ -6,7 +6,7 @@ import './PetRead.css'
 function PetRead() {
     const { item,updatePet, deletePet } = React.useContext(myContext)
     return (
-        <div className='grid-item'>
+        <div className='grid-item read-container'>
             <ul className ='list-pets'>
                 {item.map((pet, index) => (
                     <PetItem

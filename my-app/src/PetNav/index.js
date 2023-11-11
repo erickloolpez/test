@@ -5,18 +5,18 @@ function PetNav() {
     const { setCreate, setRead, setUpdate, setDelete } = React.useContext(myContext)
     return (
         <div className='grid-item navbar'>
-            <p onClick={() => {
+            <button onClick={() => {
                 setCreate(true)
                 setRead(false)
                 setUpdate(false)
                 setDelete(false)
-            }} >Create</p>
-            <p onClick={() => {
+            }} >Register the puppy</button>
+            <button onClick={() => {
                 setCreate(false)
                 setRead(true)
                 setUpdate(false)
                 setDelete(false)
-            }}>Read/Update/Delete</p>
+            }}>Read/Update/Delete</button>
         </div>
 
     )

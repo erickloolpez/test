@@ -16,6 +16,7 @@ function PetDelete(){
                 }}>Cancel</button>
                 <button onClick={()=>{
                     deletePet()
+                    setDelete(false)
                 }}>Delete</button>
             </div>
         </div>

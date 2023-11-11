@@ -2,9 +2,18 @@
     margin-left :20px;
 }
 
+.list-pets--x span{
+    color: #232D57;
+}
+
+.list-pets--inside li{
+    color: #A0A6C3;
+}
+
 .list-pets--container{
     display: flex;
     gap:60px;
+    cursor: pointer;
 }
 
 .list-space{
@@ -29,4 +38,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+svg{
+    cursor: pointer;
+    margin-right: 10px;
 }
