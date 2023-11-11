@@ -14,6 +14,8 @@ function PetUpdate() {
         setDogOwner,
         updateContent,
         item,
+        url,
+        setUrl,
     } = React.useContext(myContext)
 
     return (
@@ -45,7 +47,11 @@ function PetUpdate() {
                 </div>
                 <div>
                     <label>Url-Image</label>
-                    <input />
+                    <input 
+                    value={url}
+                    onChange={(event)=>{
+                        setUrl(event.target.value)
+                    }}/>
 
                 </div>
                 <div className='first-section'>
@@ -83,6 +89,7 @@ function PetUpdate() {
                 item[updateContent].breed = dogBreed
                 item[updateContent].age = dogAge
                 item[updateContent].owner = dogOwner
+                item[updateContent].url = url
 
                 setDogName('')
                 setDogBreed('')

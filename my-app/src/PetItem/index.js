@@ -7,6 +7,7 @@ function PetItem(props) {
     return (
         <div className='list-pets--x'>
             <li
+            className='list-space'
                 onClick={() => {
                     props.onUpdatePet()
                     setCreate(false)
@@ -22,7 +23,9 @@ function PetItem(props) {
                         <li>{props.age}</li>
                         <li>{props.breed}</li>
                     </ul>
-                    <div className='list-pets--img'></div>
+                    <div className='list-pets--img'>
+                        <img src={props.url} alt={props.name}/>
+                    </div>
 
                 </div>
 

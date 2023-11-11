@@ -10,6 +10,7 @@ function PetContext({ children }) {
     const [dogBreed, setDogBreed] = React.useState('')
     const [dogAge, setDogAge] = React.useState('')
     const [dogOwner, setDogOwner] = React.useState('')
+    const [url, setUrl] = React.useState('')
 
     const [create, setCreate] = React.useState(true)
     const [read, setRead] = React.useState(false)
@@ -63,6 +64,8 @@ function PetContext({ children }) {
                 deletePet,
                 saveItem,
                 item,
+                url,
+                setUrl,
             }
         }>
             {children}
