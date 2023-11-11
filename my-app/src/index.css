@@ -16,6 +16,7 @@
   }
 
   #root {
+    position: relative;
     width: 40%;
     height: 70%;
     background-color :#F5F7FB;

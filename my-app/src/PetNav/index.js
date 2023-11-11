@@ -16,19 +16,7 @@ function PetNav() {
                 setRead(true)
                 setUpdate(false)
                 setDelete(false)
-            }}>Read</p>
-            <p onClick={() => {
-                setCreate(false)
-                setRead(false)
-                setUpdate(true)
-                setDelete(false)
-            }}>Update</p>
-            <p onClick={() => {
-                setCreate(false)
-                setRead(false)
-                setUpdate(false)
-                setDelete(true)
-            }}>Delete</p>
+            }}>Read/Update/Delete</p>
         </div>
 
     )

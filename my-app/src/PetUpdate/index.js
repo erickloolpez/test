@@ -1,5 +1,6 @@
 import React from 'react'
 import { myContext } from '../petContext'
+import './PetUpdate.css'
 
 function PetUpdate() {
     const {
@@ -16,38 +17,67 @@ function PetUpdate() {
     } = React.useContext(myContext)
 
     return (
-        <form className='grid-item container-info'>
-            <label>Name:</label>
-            <input
-                value={dogName}
-                onChange={(event) => (
-                    setDogName(event.target.value)
-                )}
-            />
+                <form className='grid-item container-info'>
+            <div className='form-container'>
+                <div className='first-section'>
+                    <div className='first-section--content'>
+                        <label>Name:</label>
+                        <input
+                            value={dogName}
+                            onChange={(event) => (
+                                setDogName(event.target.value)
+                            )}
+                        />
 
-            <label>Breed:</label>
-            <input
-                value={dogBreed}
-                onChange={(event) => (
-                    setDogBreed(event.target.value)
-                )}
-            />
-            <label>Age:</label>
-            <input
-                value={dogAge}
-                onChange={(event) => (
-                    setDogAge(event.target.value)
-                )}
-            />
-            <label>Owners name:</label>
-            <input
-                value={dogOwner}
-                onChange={(event) => (
-                    setDogOwner(event.target.value)
-                )}
-            />
-            <button onClick={(event) => {
-                event.preventDefault()
+                    </div>
+                    <div className='first-section--content'>
+                        <label>Breed:</label>
+                        <input
+                            value={dogBreed}
+                            onChange={(event) => (
+                                setDogBreed(event.target.value)
+                            )}
+                        />
+
+                    </div>
+
+
+                </div>
+                <div>
+                    <label>Url-Image</label>
+                    <input />
+
+                </div>
+                <div className='first-section'>
+                    <div className='first-section--content'>
+                        <label>Age:</label>
+                        <input
+                            value={dogAge}
+                            onChange={(event) => (
+                                setDogAge(event.target.value)
+                            )}
+                        />
+
+                    </div>
+                    <div className='first-section--content'>
+                        <label>Owners name:</label>
+                        <input
+                            value={dogOwner}
+                            onChange={(event) => (
+                                setDogOwner(event.target.value)
+                            )}
+                        />
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div className='form-button--save'>
+                <p>By erickloolpez</p>
+                <button
+                onClick={(event) => {
+                                    event.preventDefault()
 
                 item[updateContent].name = dogName
                 item[updateContent].breed = dogBreed
@@ -58,9 +88,10 @@ function PetUpdate() {
                 setDogBreed('')
                 setDogAge('')
                 setDogOwner('')
-            }}>Save</button>
-        </form>
+                }}>Save</button>
 
+            </div>
+        </form>
     )
 }
 

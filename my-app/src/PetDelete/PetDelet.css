@@ -1,0 +1,60 @@
+.modal{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+}
+
+.active{
+    opacity: 1;
+}
+
+.modal-sign{
+    width: 40px;
+    height :40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid red;
+    border-radius: 50%;
+}
+
+.modal h1{
+    font-size:20px;
+}
+
+.modal p{
+    font-size:14px;
+}
+
+.modal-buttons{
+    display: flex;
+    gap: 30px;
+}
+
+.modal-buttons button{
+    padding: 10px;
+}
+
+.modal-buttons button:first-of-type{
+    background-color: #C1C1C1;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.modal-buttons button:last-of-type{
+    background-color: red;
+    color: white;
+    border: 1px solid transparent;
+}

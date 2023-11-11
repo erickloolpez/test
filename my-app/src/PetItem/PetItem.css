@@ -1,0 +1,21 @@
+.list-pets--inside{
+    margin-left :20px;
+}
+
+.list-pets--container{
+    display: flex;
+    gap:60px;
+}
+
+.list-pets--img{
+    width:80px;
+    height: 66px;
+   background-color: #ccc;
+   border-radius: 50%;
+}
+
+.list-pets--x{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
