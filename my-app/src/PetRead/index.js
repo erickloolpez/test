@@ -1,12 +1,13 @@
 import React from 'react'
 import { myContext } from "../petContext"
 import { PetItem } from '../PetItem/index'
+import './PetRead.css'
 
 function PetRead() {
     const { item,updatePet } = React.useContext(myContext)
     return (
         <div className='grid-item'>
-            <ul>
+            <ul className ='list-pets'>
                 {item.map((pet, index) => (
                     <PetItem
                         key={index}

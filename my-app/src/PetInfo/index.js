@@ -16,50 +16,80 @@ function PetInfo() {
     } = React.useContext(myContext)
     return (
         <form className='grid-item container-info'>
-            <label>Name:</label>
-            <input
-                value={dogName}
-                onChange={(event) => (
-                    setDogName(event.target.value)
-                )}
-            />
+            <div className='form-container'>
+                <div className='first-section'>
+                    <div className='first-section--content'>
+                        <label>Name:</label>
+                        <input
+                            value={dogName}
+                            onChange={(event) => (
+                                setDogName(event.target.value)
+                            )}
+                        />
 
-            <label>Breed:</label>
-            <input
-                value={dogBreed}
-                onChange={(event) => (
-                    setDogBreed(event.target.value)
-                )}
-            />
-            <label>Age:</label>
-            <input
-                value={dogAge}
-                onChange={(event) => (
-                    setDogAge(event.target.value)
-                )}
-            />
-            <label>Owners name:</label>
-            <input
-                value={dogOwner}
-                onChange={(event) => (
-                    setDogOwner(event.target.value)
-                )}
-            />
-            <button onClick={(event)=>{
-                event.preventDefault()
-                const newList = [...item]
+                    </div>
+                    <div className='first-section--content'>
+                        <label>Breed:</label>
+                        <input
+                            value={dogBreed}
+                            onChange={(event) => (
+                                setDogBreed(event.target.value)
+                            )}
+                        />
 
-                newList.push({name:dogName,breed:dogBreed,age:dogAge,owner:dogOwner})
+                    </div>
 
-                saveItem(newList)
 
-                console.log(newList)
+                </div>
+                <div>
+                    <label>Url-Image</label>
+                    <input />
 
-                setDogName('')
-                setDogBreed('')
-                setDogAge('')
-                setDogOwner('')
-            }}>+</button>
+                </div>
+                <div className='first-section'>
+                    <div className='first-section--content'>
+                        <label>Age:</label>
+                        <input
+                            value={dogAge}
+                            onChange={(event) => (
+                                setDogAge(event.target.value)
+                            )}
+                        />
+
+                    </div>
+                    <div className='first-section--content'>
+                        <label>Owners name:</label>
+                        <input
+                            value={dogOwner}
+                            onChange={(event) => (
+                                setDogOwner(event.target.value)
+                            )}
+                        />
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div className='form-button'>
+                <p>By erickloolpez</p>
+                <button onClick={(event) => {
+                    event.preventDefault()
+                    const newList = [...item]
+
+                    newList.push({ name: dogName, breed: dogBreed, age: dogAge, owner: dogOwner })
+
+                    saveItem(newList)
+
+                    console.log(newList)
+
+                    setDogName('')
+                    setDogBreed('')
+                    setDogAge('')
+                    setDogOwner('')
+                }}>+</button>
+
+            </div>
         </form>
 
     )

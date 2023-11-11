@@ -5,11 +5,13 @@ import { myContext } from '../petContext'
 import {PetRead} from '../PetRead/index'
 import {PetUpdate} from '../PetUpdate/index'
 import {PetDelete} from '../PetDelete/index'
+import {PetTitle} from '../PetTitle/index'
 
 function AppUI() {
     const { create, read, update, del} = React.useContext(myContext)
     return (
         <>
+            <PetTitle/>
             <PetNav />
             {create && (
                 <PetInfo />
