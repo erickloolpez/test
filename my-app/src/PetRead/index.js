@@ -15,6 +15,7 @@ function PetRead() {
                         owner={pet.owner}
                         age={pet.age}
                         breed={pet.breed}
+                        url ={pet.url}
                         onUpdatePet={()=>updatePet(pet.owner)}
                         onDeletePet={()=>deletePet(pet.owner)}
                     />

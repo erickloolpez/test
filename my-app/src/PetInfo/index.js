@@ -7,6 +7,8 @@ function PetInfo() {
         dogBreed,
         dogAge,
         dogOwner,
+        url,
+        setUrl,
         setDogName,
         setDogBreed,
         setDogAge,
@@ -43,7 +45,11 @@ function PetInfo() {
                 </div>
                 <div>
                     <label>Url-Image</label>
-                    <input />
+                    <input 
+                    value={url}
+                    onChange={(event)=>{
+                        setUrl(event.target.value)
+                    }}/>
 
                 </div>
                 <div className='first-section'>
@@ -77,7 +83,7 @@ function PetInfo() {
                     event.preventDefault()
                     const newList = [...item]
 
-                    newList.push({ name: dogName, breed: dogBreed, age: dogAge, owner: dogOwner })
+                    newList.push({ name: dogName, breed: dogBreed, age: dogAge, owner: dogOwner, url})
 
                     saveItem(newList)
 
@@ -87,6 +93,7 @@ function PetInfo() {
                     setDogBreed('')
                     setDogAge('')
                     setDogOwner('')
+                    setUrl('')
                 }}>+</button>
 
             </div>
