@@ -3,7 +3,7 @@ import { myContext } from "../petContext"
 import { PetItem } from '../PetItem/index'
 
 function PetRead() {
-    const { listPets } = React.useContext(myContext)
+    const { listPets,updatePet } = React.useContext(myContext)
     return (
         <div className='grid-item'>
             <ul>
@@ -14,6 +14,7 @@ function PetRead() {
                         owner={pet.owner}
                         age={pet.age}
                         breed={pet.breed}
+                        onUpdatePet={()=>updatePet(pet.owner)}
                     />
                 ))}
             </ul>
