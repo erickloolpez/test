@@ -1,14 +1,37 @@
+import React from 'react'
 import './PetNav.css'
-function PetNav(){
-    return(
+import { myContext } from '../petContext'
+function PetNav() {
+    const { setCreate, setRead, setUpdate, setDelete } = React.useContext(myContext)
+    return (
         <div className='grid-item navbar'>
-            <a>Create</a>
-            <a>Read</a>
-            <a>Update</a>
-            <a>Delete</a>
+            <p onClick={() => {
+                setCreate(true)
+                setRead(false)
+                setUpdate(false)
+                setDelete(false)
+            }} >Create</p>
+            <p onClick={() => {
+                setCreate(false)
+                setRead(true)
+                setUpdate(false)
+                setDelete(false)
+            }}>Read</p>
+            <p onClick={() => {
+                setCreate(false)
+                setRead(false)
+                setUpdate(true)
+                setDelete(false)
+            }}>Update</p>
+            <p onClick={() => {
+                setCreate(false)
+                setRead(false)
+                setUpdate(false)
+                setDelete(true)
+            }}>Delete</p>
         </div>
 
     )
 }
 
-export {PetNav}
+export { PetNav }

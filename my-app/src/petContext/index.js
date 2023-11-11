@@ -7,7 +7,12 @@ function PetContext({ children }) {
     const[dogAge, setDogAge]= React.useState('')
     const[dogOwner, setDogOwner]= React.useState('')
 
-    const listPets = []
+    const[create, setCreate] = React.useState(true)
+    const [read, setRead] = React.useState(false)
+    const [update, setUpdate] =React.useState(false)
+    const [del, setDelete] = React.useState(false)
+
+    const [listPets, setListPets] = React.useState([]) 
 
 
 
@@ -18,10 +23,20 @@ function PetContext({ children }) {
                 dogBreed,
                 dogAge,
                 dogOwner,
+                create,
+                read,
+                update,
+                del,
                 setDogName,
                 setDogBreed,
                 setDogAge,
                 setDogOwner,
+                listPets,
+                setCreate,
+                setRead,
+                setUpdate,
+                setDelete,
+                setListPets,
             }
         }>
             {children}
