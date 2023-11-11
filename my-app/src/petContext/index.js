@@ -28,6 +28,7 @@ function PetContext({ children }) {
         setDogBreed(item[petIndex].breed)
         setDogAge(item[petIndex].age)
         setDogOwner(item[petIndex].owner)
+        setUrl(item[petIndex].url)
 
     }
 
