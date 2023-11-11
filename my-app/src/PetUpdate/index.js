@@ -95,6 +95,7 @@ function PetUpdate() {
                 setDogBreed('')
                 setDogAge('')
                 setDogOwner('')
+                setUrl('')
                 }}>Save</button>
 
             </div>
