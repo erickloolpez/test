@@ -1,0 +1,9 @@
+.container-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-info input{
+    width:50%;
+}
