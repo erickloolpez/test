@@ -11,8 +11,8 @@ function PetUpdate() {
         setDogBreed,
         setDogAge,
         setDogOwner,
-        listPets,
         updateContent,
+        item,
     } = React.useContext(myContext)
 
     return (
@@ -49,10 +49,10 @@ function PetUpdate() {
             <button onClick={(event) => {
                 event.preventDefault()
 
-                listPets[updateContent].name = dogName
-                listPets[updateContent].breed = dogBreed
-                listPets[updateContent].age = dogAge
-                listPets[updateContent].owner = dogOwner
+                item[updateContent].name = dogName
+                item[updateContent].breed = dogBreed
+                item[updateContent].age = dogAge
+                item[updateContent].owner = dogOwner
 
                 setDogName('')
                 setDogBreed('')

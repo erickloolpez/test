@@ -2,11 +2,11 @@ import React from 'react'
 import { myContext } from '../petContext'
 import { PetItem } from '../PetItem'
 function PetDelete(){
-    const { listPets,updatePet, deletePet } = React.useContext(myContext)
+    const { item,updatePet, deletePet } = React.useContext(myContext)
     return(
         <div className='grid-item'>
             <ul>
-                {listPets.map((pet, index) => (
+                {item.map((pet, index) => (
                     <PetItem
                         key={index}
                         name={pet.name}

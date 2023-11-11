@@ -1,7 +1,11 @@
 import React from 'react'
+import { useLocalStorage } from './useLocalStorage'
 const myContext = React.createContext()
 
 function PetContext({ children }) {
+
+    const {item, saveItem}= useLocalStorage('PETS_V1',[])
+
     const [dogName, setDogName] = React.useState('')
     const [dogBreed, setDogBreed] = React.useState('')
     const [dogAge, setDogAge] = React.useState('')
@@ -17,22 +21,22 @@ function PetContext({ children }) {
     const [updateContent, setUpdateContent] = React.useState(0)
 
     const updatePet = (owner) => {
-        const petIndex = listPets.findIndex(pet => pet.owner === owner)
+        const petIndex = item.findIndex(pet => pet.owner === owner)
 
         setUpdateContent(petIndex)
-        setDogName(listPets[petIndex].name)
-        setDogBreed(listPets[petIndex].breed)
-        setDogAge(listPets[petIndex].age)
-        setDogOwner(listPets[petIndex].owner)
+        setDogName(item[petIndex].name)
+        setDogBreed(item[petIndex].breed)
+        setDogAge(item[petIndex].age)
+        setDogOwner(item[petIndex].owner)
 
     }
 
     const deletePet = (owner) => {
-        const newList = [...listPets]
+        const newList = [...item]
         const petIndex = newList.findIndex(pet => pet.owner === owner)
 
         newList.splice(petIndex, 1)
-        setListPets(newList)
+        saveItem(newList)
     }
 
     return (
@@ -60,6 +64,8 @@ function PetContext({ children }) {
                 updateContent,
                 setUpdateContent,
                 deletePet,
+                saveItem,
+                item,
             }
         }>
             {children}

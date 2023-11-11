@@ -11,8 +11,8 @@ function PetInfo() {
         setDogBreed,
         setDogAge,
         setDogOwner,
-        listPets,
-        setListPets,
+        item,
+        saveItem,
     } = React.useContext(myContext)
     return (
         <form className='grid-item container-info'>
@@ -47,11 +47,11 @@ function PetInfo() {
             />
             <button onClick={(event)=>{
                 event.preventDefault()
-                const newList = [...listPets]
+                const newList = [...item]
 
                 newList.push({name:dogName,breed:dogBreed,age:dogAge,owner:dogOwner})
 
-                setListPets(newList)
+                saveItem(newList)
 
                 console.log(newList)
 
