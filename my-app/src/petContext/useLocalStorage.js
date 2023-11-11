@@ -13,7 +13,7 @@ function useLocalStorage(itemName, initValue){
                 parsedItem = initValue
             }else{
                 parsedItem = JSON.parse(localStorageItem)
-                setItem(initValue)
+                setItem(parsedItem)
             }
         }catch(error){
             console.log("error",error)

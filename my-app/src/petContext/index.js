@@ -16,7 +16,6 @@ function PetContext({ children }) {
     const [update, setUpdate] = React.useState(false)
     const [del, setDelete] = React.useState(false)
 
-    const [listPets, setListPets] = React.useState([])
 
     const [updateContent, setUpdateContent] = React.useState(0)
 
@@ -54,12 +53,10 @@ function PetContext({ children }) {
                 setDogBreed,
                 setDogAge,
                 setDogOwner,
-                listPets,
                 setCreate,
                 setRead,
                 setUpdate,
                 setDelete,
-                setListPets,
                 updatePet,
                 updateContent,
                 setUpdateContent,
